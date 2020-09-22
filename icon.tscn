@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://VisualShader/2D/dissolve2D.tres" type="Shader" id=2]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+
+[sub_resource type="NoiseTexture" id=2]
+noise = SubResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 2 )
+shader_param/transparency = 0.0
+shader_param/outlinePercent = 0.7
+shader_param/outlineColor = Color( 1, 0, 0, 1 )
+shader_param/noiseTexture = SubResource( 2 )
+
+[node name="icon" type="Sprite"]
+material = SubResource( 3 )
+position = Vector2( 47, 122 )
+texture = ExtResource( 1 )
