@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Shader Practice"
-run/main_scene="res://icon.tscn"
+run/main_scene="res://Shaders/2D/Metaballs/Metaballs.tscn"
 config/icon="res://icon.png"
 
 [rendering]
